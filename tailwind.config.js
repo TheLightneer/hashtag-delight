@@ -5,7 +5,11 @@ export default {
     './components/**/*.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins'],
+      },
+    },
   },
   plugins: [],
 }
