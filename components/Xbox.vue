@@ -62,7 +62,7 @@ onMounted(() => {
   $anime({
     targets: "path",
     strokeDashoffset: [$anime.setDashoffset, 0],
-    easing: "steps(10)",
+    easing: "easeInOutQuad",
     duration: 1500,
     delay: function (el, i) {
       return i * 250;

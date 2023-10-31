@@ -1,18 +1,18 @@
 <template>
   <div
-    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col space-y-5"
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col space-y-10"
   >
     <div class="text-8xl font-black italic flex">
-      <div class="anime-title-hash mr-10">#</div>
-      <div class="anime-title-d">D</div>
-      <div class="anime-title-e">e</div>
-      <div class="anime-title-l">l</div>
-      <div class="anime-title-i">i</div>
-      <div class="anime-title-g">g</div>
-      <div class="anime-title-h">h</div>
-      <div class="anime-title-t">t</div>
+      <div class="anime-title anime-title-hash mr-10">#</div>
+      <div class="anime-title anime-title-d">D</div>
+      <div class="anime-title anime-title-e">e</div>
+      <div class="anime-title anime-title-l">l</div>
+      <div class="anime-title anime-title-i">i</div>
+      <div class="anime-title anime-title-g">g</div>
+      <div class="anime-title anime-title-h">h</div>
+      <div class="anime-title anime-title-t">t</div>
     </div>
-    <div class="font-normal">Click here to start</div>
+    <div class="font-normal z-10 transition-all duration-300 hover:shadow-lg w-fit" @click="changePage">Click here to start</div>
   </div>
 </template>
 
@@ -26,8 +26,13 @@ const getRandomInt = (max: number): number => {
   return result;
 };
 
+const animeTimeline = ref()
+const changePage = () =>{
+  animeTimeline.value.remove('.anime-title') 
+}
+
 onMounted(() => {
-  const animeTimeline = $anime
+  animeTimeline.value = $anime
     .timeline({
       endDelay: 300,
       easing: "easeInOutQuad",

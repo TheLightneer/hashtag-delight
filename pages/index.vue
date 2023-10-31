@@ -1,8 +1,8 @@
 <template>
   <div class="w-screen h-screen bg-gray-50 relative font-poppins">
-    <!-- <Landing /> -->
+    <Landing />
     <!-- <Mainpage/> -->
-    <Xbox/>
+    <!-- <Xbox/> -->
   </div>
 </template>
 
